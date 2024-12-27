@@ -5,8 +5,13 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student(1,"Amy", "123 W. Elm St."));
+        students.add(new Student(1,"Fred", "123 W. Elm St."));
+        students.add(new Student(2,"Amy", "232 South St."));
 
+        //rollNo comparator
+
+        MySelectionSortMethod.selectionSort(students, new NameComparator());
+        System.out.println("\nSORTED BY NAME:");
         printStudents(students);
     }
 

@@ -8,7 +8,9 @@ public class Main {
         students.add(new Student(1,"Fred", "123 W. Elm St."));
         students.add(new Student(2,"Amy", "232 South St."));
 
-        //rollNo comparator
+        MySelectionSortMethod.selectionSort(students, new RollNoComparator());
+        System.out.println("\nSORTED BY ROLL NUMBER:");
+        printStudents(students);
 
         MySelectionSortMethod.selectionSort(students, new NameComparator());
         System.out.println("\nSORTED BY NAME:");

@@ -1,12 +1,20 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("test2");
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student(1,"Amy", "123 W. Elm St."));
+
+        printStudents(students);
+    }
 
 
+
+    public static void printStudents(ArrayList<Student> students) {
+        for (Student student : students) {
+            System.out.println(student);
         }
     }
 }
